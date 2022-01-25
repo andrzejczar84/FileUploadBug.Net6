@@ -1,0 +1,30 @@
+﻿@page "/"
+
+@inherits IndexBase
+
+<PageTitle>Index</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+
+
+<label for="pic" class="col-sm-2 col-form-label">
+            
+            <h3>bytes=@(readbytes.ToString())</h3>
+        </label>
+        <div class="col-sm-10">
+            <InputFile id="pic" OnChange="@OnInputFileChange">Select File</InputFile>
+                    @if (imageDataUrl != string.Empty)
+                    {
+                        <div class="card">
+                            <div class="card-body">
+                                <img class="rounded m-1" src="@imageDataUrl" />
+                            </div>
+                        </div>
+                    }
+                </div>
+      
