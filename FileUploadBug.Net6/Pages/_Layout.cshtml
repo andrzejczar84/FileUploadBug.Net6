@@ -12,6 +12,16 @@
     <link href="css/site.css" rel="stylesheet" />
     <link href="FileUploadBug.Net6.styles.css" rel="stylesheet" />
     <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+
+    <script>
+        async function setImageUsingStreaming(imageElementId, imageStream) {
+  const arrayBuffer = await imageStream.arrayBuffer();
+  const blob = new Blob([arrayBuffer]);
+  const url = URL.createObjectURL(blob);
+  document.getElementById(imageElementId).src = url;
+}
+    </script>
+
 </head>
 <body>
     @RenderBody()

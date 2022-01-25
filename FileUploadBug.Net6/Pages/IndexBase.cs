@@ -1,6 +1,7 @@
 ﻿using FileUploadBug.Net6.DBModel;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.JSInterop;
 
 namespace FileUploadBug.Net6.Pages
 {
@@ -33,6 +34,9 @@ namespace FileUploadBug.Net6.Pages
         //    ImgUploaded = buffer;
 
         //}
+
+   
+        
 
         protected async Task OnInputFileChange(InputFileChangeEventArgs e)
         {
